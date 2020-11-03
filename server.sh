@@ -7,7 +7,7 @@ cat << __EOF__ > /etc/rsyncd.conf
 # GLOBAL OPTIONS
 uid = root
 gid = root
-##use chroot = true
+use chroot = true
 pid file = /var/run/rsyncd.pid
 log file = /dev/stdout
 timeout = $RSYNC_TIMEOUT
@@ -56,7 +56,7 @@ for name in $(env | grep ".*_NAME.*"); do
     path = $rs_vol
     comment = $rs_name
     lock file = /var/lock/rsyncd
-    list = yes
+    list = no
     ignore errors = no
     ignore nonreadable = yes
     transfer logging = yes
