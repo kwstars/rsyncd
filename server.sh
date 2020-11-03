@@ -7,6 +7,7 @@ cat << __EOF__ > /etc/rsyncd.conf
 # GLOBAL OPTIONS
 uid = root
 gid = root
+incoming chmod = Du=wrx,Dgo=rx,Fu=wr,Fgo=r
 use chroot = true
 pid file = /var/run/rsyncd.pid
 log file = /dev/stdout
